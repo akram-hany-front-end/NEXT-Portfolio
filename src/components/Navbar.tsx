@@ -3,6 +3,7 @@ import { Download, Moon } from "lucide-react";
 import { MoonStar } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import ShinyText from './ShinyText';
 
 const links = [
   { title: "About", href: "#about" },
@@ -16,8 +17,33 @@ export default function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50">
       <nav className="mx-auto mt-4 flex h-16 w-[95%] max-w-7xl items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-6 backdrop-blur-xl">
         {/* Logo */}
-        <Link href="/" className="text-xl font-bold tracking-widest text-white">
-          <Image className="opacity-20 transition-0.3s hover:opacity-85" src="/man2.png" alt="logo" width={80} height={80}  />
+        <Link href="/" className="flex flex-col items-center text-xl font-bold tracking-widest text-white">
+          <Image className="opacity-20 transition-0.3s hover:opacity-85" src="/man2.png" alt="logo" width={60} height={60}  />
+          <ShinyText
+
+  text="Akram Hany"
+
+  speed={2}
+
+  className="text-sm font-bold font-sans"
+
+  delay={0}
+
+  color="#b5b5b3"
+
+  shineColor="#FFFFFF40"
+
+  spread={120}
+
+  direction="left"
+
+  yoyo={true}
+
+  pauseOnHover={true}
+
+  disabled={false}
+
+/>
         </Link>
 
         {/* Desktop Links */}

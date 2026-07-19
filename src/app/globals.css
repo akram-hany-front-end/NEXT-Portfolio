@@ -5,6 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 html {
+  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   cursor: none;
 }
@@ -14,6 +15,11 @@ body {
   color: white;
   cursor: none;
 }
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  height: 100vh;
+}
 button{
   cursor: none;
 }
@@ -21,19 +27,9 @@ a{
   cursor: none;
 }
 
-@keyframes matrix {
-  from {
-    transform: translateY(-120%);
-  }
 
-  to {
-    transform: translateY(900px);
-  }
-}
 
-.animate-matrix {
-  animation: matrix 2s linear infinite;
-}
+
 .line {
   overflow: hidden;
 }

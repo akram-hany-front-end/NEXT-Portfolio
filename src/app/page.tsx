@@ -1,42 +1,47 @@
-import Hero from "@/components/hero/Hero";
-import Navbar from "@/components/Navbar";
-import Skills from "@/components/Skills";
+'use client';
+import { useEffect } from 'react';
+import Hero from '@/components/hero/Hero';
+import Skills from '@/components/Skills';
+import Navbar from '@/components/Navbar';
 
- 
 export default function Home() {
+  useEffect(() => {
+    // إزالة أي تأثيرات سابقة
+    document.documentElement.style.scrollBehavior = 'smooth';
+    document.body.style.overflowX = 'hidden';
+  }, []);
+
   return (
     <>
       <Navbar />
 
-      <main className="pt-24">
-        <section
-          id="about"
-          className="flex h-screen items-center justify-center"
-        >
+      <main>
+        {/* Hero */}
+        <section id="about" className="min-h-screen h-screen ">
           <Hero />
         </section>
 
-        <section
-                  style={{ zIndex: 1000 }}
-
-          id="skills"
-          className="  h-screen "
-        >
+        {/* Skills */}
+        <section id="skills" className="min-h-screen h-screen ">
           <Skills />
         </section>
 
-        <section
-          id="projects"
-          className="flex h-screen items-center justify-center"
-        >
-          Projects
+        {/* About */}
+        <section id="projects" className="min-h-screen h-screen  flex items-center justify-center">
+          <div className="text-center px-6 max-w-3xl">
+            <h2 className="text-6xl font-bold text-white mb-6">About Me</h2>
+            <p className="text-xl text-gray-300">
+              اكتب هنا محتوى الـ About section
+            </p>
+          </div>
         </section>
 
-        <section
-          id="contact"
-          className="flex h-screen items-center justify-center"
-        >
-          Contact
+        {/* Contact */}
+        <section id="contact" className="min-h-screen h-screen flex items-center justify-center">
+          <div className="text-center px-6">
+            <h2 className="text-6xl font-bold text-white mb-8">Get In Touch</h2>
+            <p className="text-cyan-400 text-3xl">تواصل معي</p>
+          </div>
         </section>
       </main>
     </>

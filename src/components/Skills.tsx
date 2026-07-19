@@ -81,16 +81,14 @@ export default function SkillsCircle() {
   return (
     <section
       ref={sectionRef}
-      className="min-h-screen py-20 flex items-center justify-center overflow-hidden relative"
-      style={{ zIndex: 1 }} // قيمة افتراضية
-    >
-      <div className="relative w-[800px] h-[800px] mx-auto">
+className="h-screen py-20 flex items-center justify-center overflow-hidden relative "    >
+      <div className="relative mx-auto">
         {/* Center Photo */}
         <div
           ref={centerRef}
           className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
         >
-          <div className="w-64 h-64 rounded-full overflow-hidden border-8 border-white/20 shadow-2xl shadow-cyan-300/20">
+          <div className="w-64 h-64 rounded-full overflow-hidden border-2 border-cyan-400 shadow-2xl shadow-cyan-300/20">
             <img
               src="/man2.png"
               alt="Your Photo"
