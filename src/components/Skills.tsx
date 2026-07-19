@@ -4,20 +4,33 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ShinyText from "./ShinyText";
 import { useTheme } from "next-themes";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+} from "react-icons/fa";
+
+import {
+    SiTypescript,
+  SiNextdotjs,
+  SiDotnet,
+  SiTailwindcss,
+  SiMongodb,
+} from "react-icons/si";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const skills = [
-  { name: "test", icon: "⚡" },
-  { name: "test", icon: "⚛️" },
-  { name: "test", icon: "💙" },
-  { name: "test", icon: "🌊" },
-  { name: "test", icon: "🎥" },
-  { name: "test", icon: "✨" },
-  { name: "test", icon: "🟢" },
-  { name: "test", icon: "🍃" },
+  { name: "HTML5", icon: <FaHtml5 /> },
+  { name: "CSS3", icon: <FaCss3Alt /> },
+    { name: "TypeScript", icon: <SiTypescript /> },
+  { name: "React", icon: <FaReact /> },
+  { name: "Next.js", icon: <SiNextdotjs /> },
+  { name: ".NET", icon: <SiDotnet /> },
+  { name: "Tailwind", icon: <SiTailwindcss /> },
+  { name: "MongoDB", icon: <SiMongodb /> },
 ];
-
 export default function SkillsCircle() {
   const { resolvedTheme } = useTheme();
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -84,7 +97,7 @@ export default function SkillsCircle() {
             />
           </div>
 
-          <div className="text-center mt-6">
+          <div className="flex flex-col text-center mt-6">
             <ShinyText
               text="Akram Hany"
               speed={2}
@@ -114,7 +127,7 @@ export default function SkillsCircle() {
           </div>
         </div>
 
-        {/* Orbit Container - اللف هنا شغال */}
+        {/* Orbit Container */}
         <div
           ref={orbitContainerRef}
           className="absolute left-1/2 top-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2 origin-center"

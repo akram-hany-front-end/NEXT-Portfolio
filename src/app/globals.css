@@ -117,7 +117,7 @@
   html {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
-    cursor: none;
+    cursor: none !important;
   }
   
   section {
@@ -127,6 +127,6 @@
   }
   
   button, a {
-    cursor: none;
+    cursor: none !important;
   }
 }

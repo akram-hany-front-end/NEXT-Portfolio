@@ -68,8 +68,8 @@ export default function Hero() {
               tintOpacity={0}
               blur={0}
               textColor={isDark ? "#f5f5f5" : "#111111"}
-              lineColor={isDark ? "#06B6D4" : "#111111"}
-              baseColor={isDark ? "#525252" : "#000000"}
+              lineColor={isDark ? "#ffffff" : "#111111"}
+              baseColor={isDark ? "#ffffff" : "#000000"}
               intensity={1}
               shineSize={10}
               shineFade={40}
@@ -90,8 +90,8 @@ export default function Hero() {
               tintOpacity={0}
               blur={0}
               textColor={isDark ? "#f5f5f5" : "#111111"}
-              lineColor={isDark ? "#06B6D4" : "#111111"}
-              baseColor={isDark ? "#525252" : "#000000"}
+              lineColor={isDark ? "#ffffff" : "#111111"}
+              baseColor={isDark ? "#ffffff" : "#000000"}
               intensity={1}
               shineSize={10}
               shineFade={40}
