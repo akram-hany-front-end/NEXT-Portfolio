@@ -47,13 +47,13 @@ export default function Cursor() {
         justify-center
         rounded-full
         border
-        border-cyan-400
+        border-white
         bg-cyan-400/10
         backdrop-blur-xs
         pointer-events-none
       "
     >
-      <span className="text-xs font-bold text-cyan-300">
+      <span className="text-xs font-bold text-white">
         {"</>"}
       </span>
     </div>

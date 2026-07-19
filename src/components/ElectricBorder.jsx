@@ -1,4 +1,5 @@
-import { useEffect, useRef, useCallback } from 'react';
+import { useEffect, useRef, useCallback, useState } from "react";
+import { useTheme } from "next-themes";
 import './ElectricBorder.css';
 
 const ElectricBorder = ({
@@ -16,6 +17,18 @@ const ElectricBorder = ({
   const timeRef = useRef(0);
   const lastFrameTimeRef = useRef(0);
 
+const { resolvedTheme } = useTheme();
+const [mounted, setMounted] = useState(false);
+
+useEffect(() => {
+  setMounted(true);
+}, []);
+
+const borderColor = mounted
+  ? resolvedTheme === "dark"
+    ? "#ffffff"
+    : "#111111"
+  : color;
   // Noise functions
   const random = useCallback(x => {
     return (Math.sin(x * 12.9898) * 43758.5453) % 1;
@@ -192,7 +205,7 @@ const ElectricBorder = ({
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.scale(dpr, dpr);
 
-      ctx.strokeStyle = color;
+ctx.strokeStyle = borderColor;
       ctx.lineWidth = 1;
       ctx.lineCap = 'round';
       ctx.lineJoin = 'round';
@@ -272,12 +285,12 @@ const ElectricBorder = ({
       }
       resizeObserver.disconnect();
     };
-  }, [color, speed, chaos, borderRadius, octavedNoise, getRoundedRectPoint]);
+  },  [borderColor, speed, chaos, borderRadius, octavedNoise, getRoundedRectPoint]);
 
   const vars = {
-    '--electric-border-color': color,
-    borderRadius: borderRadius
-  };
+  "--electric-border-color": borderColor,
+  borderRadius,
+};
 
   return (
     <div ref={containerRef} className={`electric-border ${className ?? ''}`} style={{ ...vars, ...style }}>
