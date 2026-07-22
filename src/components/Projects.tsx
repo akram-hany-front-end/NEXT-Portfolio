@@ -67,7 +67,7 @@ export default function Projects() {
         disabled={false}
       />
 
-      <div className="flex flex-row items-center gap-3 flex-wrap justify-center ">
+      <div className="flex flex-row items-center gap-3 flex-wrap justify-center overflow-scroll">
         {projects.map((project) => (
           <SpotlightCard
             key={project.id}
