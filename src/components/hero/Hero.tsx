@@ -5,6 +5,7 @@ import { useTheme } from "next-themes";
 import ProfileCard from "./ProfileCard";
 import SpecularButton from "../SpecularButton";
 import TextType from "@/components/TextType";
+import Link from "next/link";
 
 export default function Hero() {
   const { resolvedTheme } = useTheme();
@@ -14,7 +15,6 @@ export default function Hero() {
     setMounted(true);
   }, []);
 
-  // منع Hydration Mismatch
   if (!mounted) {
     return null;
   }
@@ -61,49 +61,53 @@ export default function Hero() {
 
           {/* BUTTONS */}
           <div className="mt-10 flex flex-wrap gap-5">
-            <SpecularButton
-              size="md"
-              radius={50}
-              tint="#ffffff"
-              tintOpacity={0}
-              blur={0}
-              textColor={isDark ? "#f5f5f5" : "#111111"}
-              lineColor={isDark ? "#ffffff" : "#111111"}
-              baseColor={isDark ? "#ffffff" : "#000000"}
-              intensity={1}
-              shineSize={10}
-              shineFade={40}
-              thickness={1}
-              speed={0.35}
-              followMouse
-              proximity={250}
-              autoAnimate={false}
-              onClick={() => console.log("clicked")}
-            >
-              View Projects
-            </SpecularButton>
-
-            <SpecularButton
-              size="md"
-              radius={50}
-              tint="#ffffff"
-              tintOpacity={0}
-              blur={0}
-              textColor={isDark ? "#f5f5f5" : "#111111"}
-              lineColor={isDark ? "#ffffff" : "#111111"}
-              baseColor={isDark ? "#ffffff" : "#000000"}
-              intensity={1}
-              shineSize={10}
-              shineFade={40}
-              thickness={1}
-              speed={0.35}
-              followMouse
-              proximity={250}
-              autoAnimate={false}
-              onClick={() => console.log("clicked")}
-            >
-              Find me here
-            </SpecularButton>
+            <Link href="#projects">
+              {" "}
+              <SpecularButton
+                size="md"
+                radius={50}
+                tint="#ffffff"
+                tintOpacity={0}
+                blur={0}
+                textColor={isDark ? "#f5f5f5" : "#111111"}
+                lineColor={isDark ? "#ffffff" : "#111111"}
+                baseColor={isDark ? "#ffffff" : "#000000"}
+                intensity={1}
+                shineSize={10}
+                shineFade={40}
+                thickness={1}
+                speed={0.35}
+                followMouse
+                proximity={250}
+                autoAnimate={false}
+                onClick={() => console.log("clicked")}
+              >
+                View Projects
+              </SpecularButton>
+            </Link>
+            <Link href="#contact">
+              <SpecularButton
+                size="md"
+                radius={50}
+                tint="#ffffff"
+                tintOpacity={0}
+                blur={0}
+                textColor={isDark ? "#f5f5f5" : "#111111"}
+                lineColor={isDark ? "#ffffff" : "#111111"}
+                baseColor={isDark ? "#ffffff" : "#000000"}
+                intensity={1}
+                shineSize={10}
+                shineFade={40}
+                thickness={1}
+                speed={0.35}
+                followMouse
+                proximity={250}
+                autoAnimate={false}
+                onClick={() => console.log("clicked")}
+              >
+                Find me here
+              </SpecularButton>
+            </Link>
           </div>
         </div>
 
