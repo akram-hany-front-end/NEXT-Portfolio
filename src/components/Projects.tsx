@@ -15,7 +15,7 @@ const projects = [
   {
     id: 2,
     src: "/pro2.png",
-        name: "Hotel-Management-System",
+    name: "Hotel-Management-System",
 
     desc: "A hotel management system that streamlines room reservations, guest management, check-ins, check-outs, and booking operations through an intuitive and efficient interface.",
     url: "https://next-hotel-system.vercel.app/dashboard/home",
@@ -23,23 +23,23 @@ const projects = [
   {
     id: 3,
     src: "/pro3.png",
-        name: "Blog-Posts",
+    name: "Blog-Posts",
 
     desc: "A modern blog platform where users can create, edit, publish, and manage articles through a clean and responsive interface",
     url: "https://next-blog-omega-ruddy.vercel.app/",
   },
   {
     id: 4,
-    src: "/pro4.png",
-        name: "School-Management-System",
+    src: "/pro6.png",
+    name: "Lab-Management-System",
 
-    desc: "A comprehensive school management system that simplifies student, teacher, class, and academic administration through an intuitive dashboard.",
-    url: "/",
+    desc: "A comprehensive laboratory management system designed to streamline patient, test, result, employee, and appointment management through an intuitive dashboard.",
+    url: "https://next-med-lab.vercel.app/",
   },
   {
     id: 5,
     src: "/pro5.png",
-        name: "Personal-Portfolio",
+    name: "Personal-Portfolio",
 
     desc: "A modern and responsive portfolio website showcasing my projects, technical skills, and professional experience with smooth animations and an intuitive user interface",
     url: "/",
@@ -88,9 +88,7 @@ export default function Projects() {
                 {project.name}
               </span>
               <p className="text-[14px] font-normal text-muted-foreground w-[350px] break-words line-clamp-2 overflow-scroll ">
-
-              {project.desc}
-
+                {project.desc}
               </p>
               <Link
                 className="text-sm text-black hover:underline  self-end"
