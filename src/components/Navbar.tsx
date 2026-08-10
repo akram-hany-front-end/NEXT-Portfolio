@@ -61,10 +61,14 @@ export default function Navbar() {
         {/* BUTTONS CONTAINER */}
         <div className="flex gap-4 items-center">
           {/* CV BUTTON */}
-          <button className="flex text-sm items-center gap-2 rounded-full border border-border bg-card hover:bg-card/80 px-5 py-2.5 text-foreground transition-all active:scale-95">
-            <Download size={14} />
-            CV
-          </button>
+         <a
+  href="/Akram Hany Ahmed Front-End {Developer}.pdf"
+  download="Akram-Hany-Ahmed-CV.pdf"
+  className="flex text-sm items-center gap-2 rounded-full border border-border bg-card hover:bg-card/80 px-5 py-2.5 text-foreground transition-all active:scale-95"
+>
+  <Download size={14} />
+  CV
+</a>
 
           {/* Theme Button */}
           <Theme />
