@@ -21,6 +21,14 @@ const projects = [
     url: "https://next-hotel-system.vercel.app/dashboard/home",
   },
   {
+    id: 6,
+    src: "/pro7.png",
+    name: "Connected",
+
+    desc: "Connected is a digital marketplace platform that connects factories, workers, wholesalers, shippers, RMDs, retailers, and customers in one place. Users can create accounts, publish products and services, search and filter listings, and contact other users directly. The platform is designed to make communication, business connections, and transactions easier and more organized",
+    url: "https://next-souk-seven.vercel.app",
+  },
+  {
     id: 3,
     src: "/pro3.png",
     name: "Blog-Posts",
@@ -67,7 +75,7 @@ export default function Projects() {
         disabled={false}
       />
 
-      <div className="flex flex-row items-center gap-3 flex-wrap justify-center overflow-scroll">
+      <div className="flex flex-row items-center gap-3 flex-wrap justify-center overflow-scroll  pt-5">
         {projects.map((project) => (
           <SpotlightCard
             key={project.id}
